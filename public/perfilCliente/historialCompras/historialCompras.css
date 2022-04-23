@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+/*Inicio programación página web*/
+
+.contenedor {
+    flex-wrap: wrap;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.izq {
+    flex-basis: 50%;
+    padding-left: 400px;
+}
+
+.der {
+    flex-basis: 30%;
+    border: 1px solid #000;
+    background-color: gainsboro;
+    padding: 10px;
+    height: 20%;
+    margin-right: 200px;
+}
+
+.titulo {
+    padding-left: 400px;
+}
+
+
+/*Cierre programación página web*/

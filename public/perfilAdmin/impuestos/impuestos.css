@@ -1,0 +1,64 @@
+.contenedor-texto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-texto {
+    flex-basis: 90%;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.contenedor-boton {
+    flex-basis: 50%;
+    padding: 15px;
+    text-align: center;
+}
+
+.boton2 {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    width: 200px;
+    height: 50px;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}
+
+.boton3 {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}
+
+.div-tabla {
+    display: table;
+    width: auto;
+    border: 1px solid #666666;
+    border-spacing: 5px;
+}
+
+.div-header {
+    display: table-row;
+    width: auto;
+    background-color: #ccc;
+}
+
+.div-fila {
+    display: table-row;
+    width: auto;
+}
+
+.div-celda {
+    float: left;
+    display: table-column;
+    width: 250px;
+    font-weight: bold;
+    padding: 1px;
+}

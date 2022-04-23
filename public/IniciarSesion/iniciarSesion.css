@@ -1,0 +1,96 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.body {
+    background-image: url(../imgs/fondo-iniciosesion.jpg);
+    background-size: cover;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #badcff;
+    background-color: transparent
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.contra {
+    display: block;
+    margin-top: 1%;
+    margin-left: 40%;
+}
+
+.contra input {
+    margin-left: 1%;
+}
+
+.correoo input {
+    margin-left: 1%;
+}
+
+.correoo {
+    margin-top: 5%;
+    margin-left: 40%;
+}
+
+.links {
+    margin-top: 1%;
+    margin-left: 40%;
+}
+
+span {
+    margin-top: 2%;
+}
+
+.olvido-contra {
+    padding-left: 1%;
+}
+
+button {
+    margin-left: 40%;
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}
+
+.input-error {
+    border-bottom: 2px solid red;
+}
+
+.txt-informativo {
+    text-align: center;
+    margin-top: 8%;
+}
+
+.beneficios {
+    text-decoration: underline 2px solid #f1c7fa;
+}
+
+.txt-info {
+    text-align: center;
+}
+
+.crear:hover {
+    color: #54fff3;
+}
+
+.flex-izq1 {
+    margin-left: 43%;
+}
+
+.imagen1 {
+    width: 35%;
+}

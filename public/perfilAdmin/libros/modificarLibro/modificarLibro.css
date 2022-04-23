@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #badcff;
+    background-color: transparent;
+    color: black;
+    margin-right: 8%;
+}
+
+select {
+    margin-left: 18%;
+}
+
+button {
+    margin-left: 40%;
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}
+
+.contenedor {
+    margin-left: 30%;
+}
+
+.input-error {
+    border-bottom: 2px solid red;
+}
+
+.pimer-contenedor {
+    margin-top: 2%;
+}
+
+.segundo-contenedor {
+    margin-top: 2%;
+}
+
+.tercer-contenedor {
+    margin-top: 2%;
+}
+
+.img {
+    width: 10%;
+    margin-left: 45%;
+}

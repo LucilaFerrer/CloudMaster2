@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family:'Montserrat', sans-serif ;
+    font-weight: bold;
+}
+div {
+    box-sizing: border-box;
+}
+
+/*Inicio programación página web*/
+.centro {
+    text-align: center;
+    border: 1px solid #000;
+    margin-top: 50px;
+    margin-bottom: 117px;
+    margin-left: 600px;
+    margin-right: 600px;
+    background-color: #54fff3;
+}
+.titulo {
+    text-align: center;
+    padding-top: 50px;
+}
+.mini {
+    font-size: 10px;
+}
+button {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}
+/*Cierre programación página web*/
+/*Js*/
+.input-error {
+    border: 2px solid red;
+}
+
+/**/

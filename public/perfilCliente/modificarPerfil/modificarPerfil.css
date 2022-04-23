@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.titulo {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.contenedor {
+    box-shadow: 0 0 30px rgb(0 0 0 / 50%);
+    border: 1px solid #000;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.izq {
+    flex-basis: 70%;
+    padding-left: 100px;
+}
+
+.der {
+    flex-basis: 30%;
+    text-align: left;
+    padding-top: 68px;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+button {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}

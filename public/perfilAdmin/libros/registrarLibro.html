@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Registro de libros</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./registrarLibro.css">
+    <link rel="stylesheet" href="../../css-general/general.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="barraNav">
+            <div id="barraLateral">
+                <a class="closebtn" onclick="closeNav()">×</a>
+                <a href="../aprobacionClienteFrecuente/aprobacionClienteFrecuente.html">Aprobación cliente frecuente </a>
+                <a href="../autores/autores.html">Registro autores</a>
+                <a href="../catalogos/registroCatalogo.html">Registro catálogos</a>
+                <a href="../descuento/descuento.html">Registro descuento</a>
+                <a href="../estadoOrden/estadoOrden.html">Estado de orden</a>
+                <a href="../impuestos/impuestos.html">Registro de impuestos</a>
+                <a href="../libros/registrarLibro.html">Registro de libros</a>
+                <a href="../reporte/reporte.html">Reportes</a>
+            </div>
+            <div id="opcionesBarraNav">
+                <button class="openbtn" onclick="openNav()">☰</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="flex-izq">
+                <a href="#"><img class="imagen" src="../../imgs/logo.jpg"></a>
+            </div>
+            <div class="flex-der">
+                <a href="../perfilAdmin.html"><span class="material-icons">
+                    home
+                    </span></a>
+
+                <a href="../../Home/home.html"><span class="material-icons">
+                    logout
+                    </span></a>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <h1>Libros</h1>
+
+    <div class="contenedor">
+        <div class="flex-abajo" id="libro1">
+            <img src="../../imgs/perseus.jpg" class="imagenes">
+            <div class="precio">
+                <a href="./modificarLibro/modificarLibro.html"><button type="submit"> Modificar </button></a>
+            </div>
+            <div>
+                <button type="submit" onclick="eliminar1()">Eliminar</button>
+            </div>
+        </div>
+        <div class="flex-abajo" id="libro2">
+            <img src="../../imgs/kyb.jpg" class="imagenes">
+            <div class="precio">
+                <a href="./modificarLibro/modificarLibro.html"> <button type="submit"> Modificar </buttton></a>
+            </div>
+            <div>
+                <button type="submit" onclick="eliminar2()">Eliminar</button>
+            </div>
+        </div>
+        <div class="flex-abajo" id="libro3">
+            <img src="../../imgs/mind.jpg" class="imagenes">
+            <div class="precio">
+                <a href="./modificarLibro/modificarLibro.html"> <button type="submit"> Modificar </button></a>
+            </div>
+            <div>
+                <button type="submit" onclick="eliminar3()">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="contenedor-arriba">
+        <h1>Agregar libros</h1>
+        <div>
+            <label>Nombre del libro</label>
+            <input type="text" required id="txt-libro" class="libro">
+
+            <label>Descuento</label>
+            <input type="number">
+        </div>
+
+        <div class="contenedor-bajo">
+            <label>Nombre del actor</label>
+            <input type="text" required id="txt-actor" class="actor">
+
+            <label>Categoría</label>
+            <select required id="categoria" class="categoria">
+                <option selected disabled hidden>Seleccione una categoría</option>
+                <optgroup label="Ficción" >
+                <option>Poesía</option>
+                <option>Novela Histórica</option>
+                <option>Teatro</option>
+            </optgroup>
+
+                <optgroup label="No Ficción">
+                <option>Mitología</option>
+                <option>Científicos</option>
+                <option>Economía</option>
+            </optgroup>
+
+                <optgroup label="Infantil">
+                <option>Colorear</option>
+                <option>Actividades</option>
+                <option>Grandes Lectores</option>
+            </optgroup>
+            </select>
+        </div>
+
+        <button type="submit" id="btn-agregar">Agregar</button>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="flex1">
+            <p class="texto">CORREO ELECTRÓNICO</p>
+            <p>libreria@libreriaonline.com</p>
+            <p class="texto">Teléfono</p>
+            <p>8888-8888</p>
+            <p class="texto">MENSAJE</p>
+            <textarea class="caja" name="texto" rows="4" cols="40" placeholder="Escriba el mensaje"></textarea>
+            <input class="boton" type="submit" value="Enviar">
+
+        </div>
+        <div class="flex2">
+            <p class="texto">POLÍTICAS</p>
+            <p>Terminos y condicones de compra</p>
+            <p>Política de privacidad</p>
+
+        </div>
+        <div class="flex3">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </br>
+            </br>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./registrarLibro.js"></script>
+    <script src="../../css-general/scrpit-general.js"></script>
+</body>
+
+</html>

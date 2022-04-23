@@ -1,0 +1,45 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #badcff;
+    background-color: transparent
+}
+
+button {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+    display: block;
+    margin-left: 50%;
+}
+
+.contenedor-central {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.input-error {
+    border-bottom: 2px solid red;
+}
+
+.footer1 {
+    margin-top: 10%;
+    flex: wrap;
+    display: flex;
+    padding-bottom: 30px;
+    border-top: 2px solid #000;
+    background-color: #313131;
+}
+
+.contenedor-modificar {
+    text-align: center;
+    margin-top: 5%;
+}

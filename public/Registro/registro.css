@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.imagen-iconos {
+    width: 5%;
+}
+
+.caja {
+    margin-bottom: 20px;
+}
+
+.boton {
+    background-color: #54fff3;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 8px;
+    color: #fff;
+}
+
+.contenedorRegistro {
+    display: flex;
+}
+
+.flex-izquierda {
+    flex-basis: 50%;
+}
+
+.flex-dererecha {
+    flex-basis: 50%;
+    letter-spacing: 30px;
+}
+
+.register {
+    margin-top: 10%;
+    position: relative;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgb(0 0 0 / 50%);
+}
+
+.book {
+    width: 800px;
+    height: 1000px;
+}
+
+input {
+    font-size: 30px;
+}
+
+form {
+    padding-top: 100px;
+    padding-left: 100px;
+    display: block;
+}
+
+.inputError {
+    border: 2px solid red;
+}
+
+.flex-izqR {
+    margin-left: 45%;
+    width: 20%;
+}
+
+button {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}

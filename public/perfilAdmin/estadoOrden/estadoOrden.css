@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family:'Montserrat', sans-serif ;
+    font-weight: bold;
+}
+div {
+    box-sizing: border-box;
+}
+.header {
+    flex: wrap;
+    display: flex;
+    border-bottom: 2px solid #000;   
+}
+
+.flex-izq {
+    flex-basis: 50%;
+    padding-left: 20px;
+} 
+
+.flex-der {
+    flex-basis: 50%;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+    letter-spacing: 30px;
+} 
+.imagen {
+    width: 10%;
+}
+
+.imagen-perfil {
+    width: 30%;
+}
+
+.imagen-iconos {
+    width: 5%;
+}
+
+.footer {
+    flex: wrap;
+    display: flex;
+    padding-bottom: 30px;
+    border-top: 2px solid #000;
+    background-color: #313131;
+}
+
+.flex1 {
+    flex-basis: 25%;
+    padding-left: 100px;
+    text-align: left;
+    color: #fff;
+}
+
+.flex2 {
+    flex-basis: 15%;
+    color: #fff;
+}
+
+.flex3 {
+    flex-basis: 33%;
+    padding-top: 10px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.texto {
+    color: #54fff3;
+}
+
+.caja {
+    margin-bottom: 20px;
+}
+
+.boton {
+    background-color: #54fff3;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 8px;
+    color: #000;  
+}
+
+.boton-der {
+    text-align: right;
+    margin-right: 30px;
+}
+
+.contenedor {
+    display: flex;
+}
+
+.color-1 {
+    background-color: #f1c7fa;
+}
+
+.color-2 {
+    background-color: #dad0ff;
+}
+
+.color-3 {
+    background-color: #badcff;
+}
+
+.color-4 {
+    background-color: #91e7ff;
+}
+
+.color-5 {
+    background-color: #65f1ff;
+}
+
+.color-6 {
+    background-color: #47f9ff;
+}
+
+.color-7 {
+    background-color: #54fff3;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.padding-gen {
+    padding: 30px;
+}
+
+.margin-arriba {
+    margin-top: 30px;
+}
+
+.margin-abajo {
+    margin-bottom: 30px;
+}
+
+.margen-lateral {
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.borde {
+    border: 2px solid #000;
+}
+
+.division {
+    border: #000 solid 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.cambio-texto {
+    font-size: large;
+}
+
+
+.centrar-texto-margen {
+    margin-left: 40%;
+}
+
+
+

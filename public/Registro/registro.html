@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Registro</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="../css-general/general.css" rel="stylesheet" type="text/css">
+    <link href="./registro.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+    <header>
+
+
+        <div class="header">
+            <div class="flex-izqR">
+                <img class="imagen" src="../imgs/logo.jpg">
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <div class="contenedorRegistro">
+        <div class="flex-izquierda"><img src="../imgs/BookOfFaces.jpg" class="book"></div>
+        <div class="flex-derecha">
+
+            <div class="fix">
+                <input id="nombre" type="text" class=" nombre" placeholder="Nombre" /> </br>
+                </br>
+                <input id="txt-primerApellido" type="text" class="primerApellido" placeholder="Primer apellido" /> </br>
+                </br>
+                <input id="txt-segundoApellido" type="text" class="segundoApellido" placeholder="Segundo apellido" /> </br>
+                </br>
+                <input id="txt-fecha" type="date" class="fecha" placeholder="Fecha de nacimiento" /> </br>
+                </br>
+                <input id="txt-cedula" type="number" class="cedula" placeholder="Identificacion" /> </br>
+                </br>
+                <input id="txt-ubicacion" type="text" class="ubicacion" placeholder="Ubicacion" /> </br>
+                </br>
+                <input id="txt-correo" type="email" class="correo" placeholder="Correo electronico" /> </br>
+                </br>
+                <input id="txt-contrasena" type="password" class="contrasena" placeholder="Contrasenna" minlength="8" /> </br>
+                </br>
+                <input id="txt-contrasena2" type="password" class="contrasena2" placeholder="Repite la contrasenna" /> </br>
+                </br>
+                <button type="submit" id="btn-guardar">Registarme</button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./registro.js"></script>
+    <script src="../css-general/scrpit-general.js"></script>
+
+
+</body>
+
+</html>

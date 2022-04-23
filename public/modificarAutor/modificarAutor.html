@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <link href="modificarAutor.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title id="titulo-edicion">
+        Editando: Autor
+    </title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="flex-izq">
+            <a href="#"><img class="imagen" src="../imagenes/logo.jpg"></a>
+        </div>
+        <div class="flex-der">
+            <a href="#"><img class="imagen-iconos" src="../imagenes/home-outline.svg"></a>
+            <a href="#"><img class="imagen-iconos" src="../imagenes/book-outline.svg"></a>
+            <a href="#"><img class="imagen-iconos" src="../imagenes/star-outline.svg"></a>
+            <a href="#"><img class="imagen-iconos" src="../imagenes/bag-handle-outline.svg"></a>
+            <a href="#"><img class="imagen-iconos" src="../imagenes/log-in-outline.svg"></a>
+        </div>
+    </div>
+
+    <form onsubmit="" id="form-cambios">
+        <div class="contenedor capa-1">
+            <div class="flex-foto">
+                <img src="../imagenes/placeholder.jpg" class="imagen-perfil">
+                <input type="file" class="input-imagen" id="input-img">
+            </div>
+            <div class="flex-info">
+                <p id="nombre-autor">
+                    Nombre:
+                    <input id="input-nombre" type="text">
+                </p>
+                <p id="pais-autor">
+                    País de origen:
+                    <input id="input-pais" type="text">
+                </p>
+                <p id="dob-autor">
+                    Fecha de nacimiento:
+                    <input id="input-dob" type="date">
+                </p>
+                <p id="generos">
+                    Géneros literarios:
+                    <input id="input-generos" type="text">
+                </p>
+            </div>
+        </div>
+
+        <div class="contenedor espaciado">
+            <div class="libros-pub">
+                <h4>
+                    Libros publicados
+                </h4>
+                <div class="contenedor" id="publicaciones">
+                    <div class="centrar-texto">
+                        <h1>
+                            Este espacio se llena con la base de datos
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="premios">
+                <h2 class="centrar-texto">
+                    Premios
+                </h2>
+                <textarea id="input-premios"></textarea>
+            </div>
+        </div>
+
+        <div class="contenedor capa-derecha">
+            <div class="resenna">
+                <h2 class="centrar-texto">
+                    Reseña
+                </h2>
+                <textarea id="input-resenna"></textarea>
+            </div>
+        </div>
+
+        <div class="boton-der">
+            <input type="button" class="boton" id="boton-cancelar" value="Cancelar">
+            <input type="submit" class="boton" id="boton-guardar" onclick="alertaValidacion()" value="Guardar cambios">
+        </div>
+    </form>
+
+
+
+    <div class="footer">
+        <div class="flex1">
+            <p class="texto">CORREO ELECTRÓNICO</p>
+            <p>libreria@libreriaonline.com</p>
+            <p class="texto">Teléfono</p>
+            <p>libreria@libreriaonline.com</p>
+            <p class="texto">MENSAJE</p>
+            <textarea class="caja" name="texto" rows="4" cols="40" placeholder="Escriba el mensaje"></textarea>
+            <input class="boton" type="submit" value="Enviar">
+
+        </div>
+        <div class="flex2">
+            <p class="texto">POLÍTICAS</p>
+            <p>Terminos y condicones de compra</p>
+            <p>Política de privacidad</p>
+
+        </div>
+        <div class="flex3">
+            <a href="#"><img class="imagen-iconos" src="../imagenes/logo-facebook.svg"></a></br></br>
+            <a href="#"><img class="imagen-iconos" src="../imagenes/logo-tumblr.svg"></a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="modificarAutor.js">
+    </script>
+</body>
+
+</html>

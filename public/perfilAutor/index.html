@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <link href="perfilAutor.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css-general/general.css">
+    <link rel="stylesheet" href="../css-general/estilos.css">
+    <title id="titulo-pagina">Autores</title>
+</head>
+
+<body onload="cargarTabla()">
+    <header>
+        <div id="barraNav">
+            <div id="barraLateral">
+                <a class="closebtn" onclick="closeNav()">×</a>
+                <a href="../perfilAdmin/aprobacionClienteFrecuente/aprobacionClienteFrecuente.html">Aprobación cliente frecuente </a>
+                <a href="../perfilAdmin/autores/registrarAutor.html">Registro autores</a>
+                <a href="../perfilAdmin/catalogos/registroCatalogo.html">Registro catálogos</a>
+                <a href="../perfilAdmin/descuento/descuento.html">Registro descuento</a>
+                <a href="../perfilAdmin/estadoOrden/estadoOrden.html">Estado de orden</a>
+                <a href="../perfilAdmin/impuestos/impuestos.html">Registro de impuestos</a>
+                <a href="../perfilAdmin/libros/registrarLibro.html">Registro de libros</a>
+                <a href="../perfilAdmin/reporte/reporte.html">Reportes</a>
+            </div>
+            <div id="opcionesBarraNav">
+                <button class="openbtn" onclick="openNav()">☰</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="flex-izq">
+                <a href="#"><img class="imagen" src="../imgs/logo.jpg"></a>
+            </div>
+            <div class="flex-der">
+                <a href="./perfilAdmin.html"><span class="material-icons">
+                    home
+                    </span></a>
+
+                <a href="../Home/home.html"><span class="material-icons">
+                    logout
+                    </span></a>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+<!-- A partir de aqui el contenido -->
+    <div class="contenedor-texto">
+        <div class="flex-texto">
+            <h1>Autores</h1>
+            <!-- <form action="">
+                <label for="buscar">Buscar:</label>
+                <select name="categoria" id="categoria">
+                    <option value="autor">Autor</option>
+                    <option value="genero">Género</option>
+                </select>
+                <input type="search" name="buscar" id="buscar">
+                <input type="submit" value="Buscar">
+            </form> -->
+            <div class="div-tabla" id="tablaAutores">
+                <div class="div-header">
+                    <div class="div-celda">Identificador</div>
+                    <div class="div-celda">Nombre</div>
+                    <div class="div-celda">Género</div>
+                    <div class="div-celda">Acción</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cargarTabla() {
+          fetch("/autores/")
+            .then(
+              function(response){
+                return response.json();
+              }
+            )
+            .then (
+              function(json) {
+                for(var cont = 0; json.length > cont; cont++) {
+                  var linea = "<div class='div-fila'><div class='div-celda'>"+json[cont]._id+"</div><div class='div-celda'>"+json[cont].nombre+"</div><div class='div-celda'>"+json[cont].genero+"</div><div class='div-celda'><a href='perfilAutor.html?id="+json[cont]._id+"'>VER</a></div></div>"
+                  document.getElementById("tablaAutores").insertAdjacentHTML("beforeend", linea);
+                }
+              }
+            ) 
+        }
+        
+    </script>
+
+<!-- Hasta aquí el contenido -->
+<div class="footer">
+    <div class="flex1">
+        <p class="texto">CORREO ELECTRÓNICO</p>
+        <p>libreria@libreriaonline.com</p>
+        <p class="texto">Teléfono</p>
+        <p>8888-8888</p>
+        <p class="texto">MENSAJE</p>
+        <textarea class="caja" name="texto" rows="4" cols="40" placeholder="Escriba el mensaje"></textarea>
+        <input class="boton" type="submit" value="Enviar">
+
+    </div>
+    <div class="flex2">
+        <p class="texto">POLÍTICAS</p>
+        <p>Terminos y condicones de compra</p>
+        <p>Política de privacidad</p>
+
+    </div>
+    <div class="flex3">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </br>
+        </br>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../css-general/scrpit-general.js"></script>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,164 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    flex: wrap;
+    display: flex;
+}
+
+.flex-izq {
+    flex-basis: 50%;
+    padding-left: 35%;
+    padding-top: 2%;
+}
+
+.flex-der {
+    flex-basis: 50%;
+    text-align: right;
+    padding-top: 35px;
+    letter-spacing: 30px;
+}
+
+.imagen {
+    width: 30%;
+}
+
+.imagen-iconos {
+    width: 5%;
+}
+
+.footer {
+    flex: wrap;
+    display: flex;
+    padding-bottom: 30px;
+    border-top: 2px solid #000;
+    background-color: #313131;
+    margin-top: 5%;
+}
+
+.flex1 {
+    flex-basis: 25%;
+    padding-left: 100px;
+    text-align: left;
+    color: #fff;
+}
+
+.flex2 {
+    flex-basis: 15%;
+    color: #fff;
+}
+
+.flex3 {
+    flex-basis: 33%;
+    padding-top: 10px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.texto {
+    color: #54fff3;
+}
+
+.caja {
+    margin-bottom: 20px;
+}
+
+.boton {
+    background-color: #54fff3;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 8px;
+    color: #fff;
+}
+
+#BarraNav {
+    background-size: cover;
+    padding-bottom: 2%;
+    overflow: auto;
+}
+
+#opcionesBarraNav {
+    float: left;
+    padding-left: 5%;
+    width: 20%;
+    padding-top: 35px;
+}
+
+#opcionesBarraNav a {
+    margin-right: 10%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#opcionesBarraNav a:hover {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1.5%;
+}
+
+#barraLateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8%;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: black;
+    background-color: #badcff;
+}
+
+#barraLateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+}
+
+#barraLateral a:hover {
+    color: black;
+    background-color: #dad0ff;
+}
+
+#barraLateral .closebtn {
+    position: absolute;
+    top: 0;
+    right: 7%;
+    font-size: 30px;
+    margin-left: 50px;
+    padding-left: 6%;
+    padding-right: 6%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 7%;
+    padding: 3% 3%;
+    border: none;
+    border-radius: 10px;
+}
+
+hr {
+    border: 2px solid black;
+}

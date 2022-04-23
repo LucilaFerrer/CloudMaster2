@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Inicio de sesión</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./iniciarSesion.css">
+    <link rel="stylesheet" href="../css-general/general.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="flex-izq1">
+                <a href="#"><img class="imagen1" src="../imgs/logo.jpg"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="txt-info">
+        <h1 class="txt-informativo">Inicio de Sesión</h1>
+        <p>Esperamos que puedas aprovechar todo nuestros
+            <a href="../landingPage/landingPage.html" class="beneficios">beneficios</a>, también queremos que puedas tener una facilidad de compra y lectura de libros, esperamos quedes muy satisfech(a).
+        </p>
+    </div>
+
+    <div class="correoo">
+        <span class="material-icons">
+            mail
+            </span>
+        <input type="mail" name="correo" placeholder="Correo eletrónico" required id="txt-correo" class="correo">
+    </div>
+
+    <div class="contra">
+        <span class="material-icons">
+            lock
+            </span>
+        <input type="password" name="contrasenna" placeholder="Contraseña" required id="txt-contrasenna" class="contrasenna">
+    </div>
+
+    <div class="links ">
+        <p>¿No tienes una cuenta?
+            <a href="../Registro/registro.html " class="crear"> Cree una</a></p>
+    </div>
+
+    <div>
+        <button type="submit" id="btn-ingresar">Ingresar</button>
+    </div>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./iniciarSesion.js"></script>
+</body>
+
+</html>

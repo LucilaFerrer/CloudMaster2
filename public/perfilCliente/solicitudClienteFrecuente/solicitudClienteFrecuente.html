@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title>Solicitud cliente frecuente</title>
+    <link href="./solicitudClienteFrecuente.css" rel="stylesheet" type="text/css">
+    <link href="../../css-general/general.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="barraNav">
+            <div id="barraLateral">
+                <a class="closebtn" onclick="closeNav()">×</a>
+                <a href="./modificarPerfil/modificarPerfil.html">Modificar perfil </a>
+                <a href="./tarjeta/tarjeta.html">Tarjeta</a>
+                <a href="./historialCompras/historialCompras.html">Historial de compras</a>
+                <a href="./solicitudClienteFrecuente/solicitudClienteFrecuente.html">Solicitud de cliente frecuente</a>
+            </div>
+            <div id="opcionesBarraNav">
+                <button class="openbtn" onclick="openNav()">☰</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="flex-izq">
+                <a href="#"><img class="imagen" src="../../imgs/logo.jpg"></a>
+            </div>
+            <div class="flex-der">
+                <a href="./perfilCliente.html"><span class="material-icons">
+                        home
+                        </span></a>
+
+                <a href="../carritoCompras/carritoCompras.html"><span class="material-icons">
+                        shopping_bag
+                        </span></a>
+
+                <a href="../favorito/favorito.html"><span class="material-icons">
+                        favorite
+                        </span></a>
+
+                <a href="../Home/home.html"><span class="material-icons">
+                        logout
+                        </span></a>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <div class="titulo">
+        <h1>Solicitud Tarjeta Cliente frecuente</h1>
+    </div>
+    <div class="centro">
+
+        <p>Id usuario:</p>
+        <input id="txt-usuario" class="usuario" type="text" name="usuario">
+        <p>Nombre del usuario:</p>
+        <input id="txt-nombre" class="nombre" type="text" name="nombre"></p>
+        <p>Libros comprados</p>
+        <input id="txt-comprado" class="comprado" type="number" name="libros" minlength="5"><br/><br/>
+        <button id="btn-solicitar" class="button">Solicitar</button>
+
+
+        <p class="mini">Nota:Para obtar para la tarjeta de cliente frecuente el usuario deberá tener al menos 5 libros comprados</p>
+    </div>
+
+    <div class="footer">
+        <div class="flex1">
+            <p class="texto">CORREO ELECTRÓNICO</p>
+            <p>libreria@libreriaonline.com</p>
+            <p class="texto">Teléfono</p>
+            <p>8888-8888</p>
+            <p class="texto">MENSAJE</p>
+            <textarea class="caja" name="texto" rows="4" cols="40" placeholder="Escriba el mensaje"></textarea>
+            <input class="boton" type="submit" value="Enviar">
+
+        </div>
+        <div class="flex2">
+            <p class="texto">POLÍTICAS</p>
+            <p>Terminos y condicones de compra</p>
+            <p>Política de privacidad</p>
+
+        </div>
+        <div class="flex3">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </br>
+            </br>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+    <script src="../css-general/scrpit-general.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./solicitudClienteFrecuente.js"></script>
+</body>
+
+</html>

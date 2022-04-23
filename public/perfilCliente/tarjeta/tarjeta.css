@@ -1,0 +1,43 @@
+
+body {
+    margin: 0;
+    font-family:'Montserrat', sans-serif ;
+    font-weight: bold;
+}
+div {
+    box-sizing: border-box;
+}
+.contenedor{
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.tarjetaEjemplo, .tarjetaInfo, .modificar, .eliminar{
+    flex-basis: 50%;
+}
+.input-error {
+    border: 2px solid red;
+}
+
+.tarjetaInfo{
+    padding: 50px;
+}
+.tarjetazo{
+    width: 50%;
+    height: 50%;
+    object-fit:scale-down;
+}
+
+button {
+    border-radius: 5px;
+    border: 2px solid #badcff;
+    background-color: transparent;
+    margin-top: 2%;
+    padding: 2px;
+    color: black;
+}
+.imagenT {
+    padding-bottom: 50px;
+    width: 100px;
+}

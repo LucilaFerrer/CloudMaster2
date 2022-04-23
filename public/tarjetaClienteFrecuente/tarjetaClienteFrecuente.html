@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link href="perfilAutor.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../css-general/general.css">
+        <link rel="stylesheet" href="./tarjetaClienteFrecuente.css">
+        <title id="titulo-pagina">Tarjeta cliente frecuente</title>    </head>
+    <body>
+        <header>
+            <div id="barraNav">
+                <div id="barraLateral">
+                    <a class="closebtn" onclick="closeNav()">×</a>
+                    <a href="../perfilAdmin/aprobacionClienteFrecuente/aprobacionClienteFrecuente.html">Aprobación cliente frecuente </a>
+                    <a href="../perfilAdmin/autores/registrarAutor.html">Registro autores</a>
+                    <a href="../perfilAdmin/catalogos/registroCatalogo.html">Registro catálogos</a>
+                    <a href="../perfilAdmin/descuento/descuento.html">Registro descuento</a>
+                    <a href="../perfilAdmin/estadoOrden/estadoOrden.html">Estado de orden</a>
+                    <a href="../perfilAdmin/impuestos/impuestos.html">Registro de impuestos</a>
+                    <a href="../perfilAdmin/libros/registrarLibro.html">Registro de libros</a>
+                    <a href="../perfilAdmin/reporte/reporte.html">Reportes</a>
+                </div>
+                <div id="opcionesBarraNav">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                </div>
+            </div>
+    
+            <div class="header">
+                <div class="flex-izq">
+                    <a href="#"><img class="imagen" src="../imgs/logo.jpg"></a>
+                </div>
+                <div class="flex-der">
+                    <a href="./perfilAdmin.html"><span class="material-icons">
+                        home
+                        </span></a>
+    
+                    <a href="../Home/home.html"><span class="material-icons">
+                        logout
+                        </span></a>
+                </div>
+            </div>
+            <hr>
+        </header>
+
+        <div class="margin-abajo margin-arriba color-7 padding-gen margen-lateral borde">
+
+            <div class="centrar-texto division espaciado-arriba color-1">
+                <h4 id="numero-tarjeta">
+                    Numero de tarjeta: 1111-2222-3333-4444
+                </h4>
+            </div>
+        
+            <div class="borde division margin-arriba color-3 cambio-texto">
+                <h3 id="titular-tarjeta"class="centrar-texto">
+                    Titular: Fallas, Daniel
+                </h3>
+                <p id="total-compras" class="centrar-texto-margen">
+                    Compras totales: 23
+                </p>
+                <p id="total-puntos" class="centrar-texto-margen">
+                    Puntos acumulados: 5
+                </p>
+                <p id="edad-membresia" class="centrar-texto-margen">
+                    Miembro desde: 22 Marzo 2022
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="flex1">
+                <p class="texto">CORREO ELECTRÓNICO</p>
+                <p>libreria@libreriaonline.com</p>
+                <p class="texto">Teléfono</p>
+                <p>libreria@libreriaonline.com</p>
+                <p class="texto">MENSAJE</p>
+                <textarea class="caja" name="texto" rows="4" cols="40" placeholder="Escriba el mensaje"></textarea>
+                <input class="boton" type="submit" value="Enviar">
+
+            </div>
+            <div class="flex2">
+                <p class="texto">POLÍTICAS</p>
+                <p>Terminos y condicones de compra</p>
+                <p>Política de privacidad</p>
+                
+            </div>
+            <div class="flex3">
+                <a href="#"><img class="imagen-iconos" src="../imagenes/logo-facebook.svg"></a></br></br>
+                <a href="#"><img class="imagen-iconos" src="../imagenes/logo-tumblr.svg"></a>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+        <script src="../css-general/scrpit-general.js"></script>
+    </body>
+</html>
