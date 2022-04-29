@@ -6,6 +6,8 @@ var libroSchema = mongoose.Schema({
   titulo: String,
   precio: Number,
   isbn: Number,
+  descuento: Number,
+  precio_final: Number,
   portada: String,
   fecha_publicacion: Number,
   genero_literario: String,

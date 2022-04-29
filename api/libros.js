@@ -25,8 +25,7 @@ router.post('/buscar', function(req, res) {
 
 router.post('/buscarautor', function(req, res) {
   var idAutor = { "autor_id": req.body.idAutor }
-  // console.log(idAutor)
-  Libro.findOne(idAutor).exec()
+  Libro.find(idAutor).exec()
     .then(
       function(result) {
         res.json(result);
@@ -34,11 +33,13 @@ router.post('/buscarautor', function(req, res) {
     );
 });
 
-router.post('/actualizar', function(req, res) {
-  var nombre = req.body.nombre;
-  var edad = req.body.edad;
+router.post('/descuento', function(req, res) {
+  var identificador = req.body.id;
+  var precio = req.body.precio;
+  var descuento = req.body.descuento;
+  var precio_final = precio - (precio * (descuento / 100)); 
   // findOneAndUpdate - Filtro - Valores - Opciones - Función anónima
-  Libro.findOneAndUpdate({nombre: nombre}, {$set:{edad:edad}}, {useFindAndModify: false, new: true}, function (err, doc) {
+  Libro.findOneAndUpdate({_id: identificador}, {$set:{descuento:descuento,precio_final:precio_final}}, {useFindAndModify: false, new: true}, function (err, doc) {
     res.json(doc);
   });
 });

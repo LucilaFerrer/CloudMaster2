@@ -34,24 +34,24 @@
     color: black;
 }
 .div-tabla{
-    display:  table;
-    width:auto;
-    border:1px solid  #666666;
-    border-spacing:5px;
+    display: table;
+    width: auto;
+    border: 1px solid  #666666;
+    border-spacing: 5px;
 }
 .div-header{
-    display:table-row;
-    width:auto;
-    background-color:#ccc;
+    display: table-row;
+    width: auto;
+    background-color: #ccc;
 }
 .div-fila{
-   display:table-row;
-   width:auto;
+   display: table-row;
+   width: auto;
 }
 .div-celda{
-    float:left;
-    display:table-column;
-    width: 250px;
+    float: left;
+    display: table-column;
+    width: fit-content;
     font-weight: bold;
     padding: 1px;
 }
@@ -70,4 +70,7 @@
 }
 .img-libro{
     width: 200px;
+}
+.div-libro{
+    flex-basis: 25%
 }

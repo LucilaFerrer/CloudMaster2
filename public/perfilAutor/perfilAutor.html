@@ -50,7 +50,9 @@
 
     <div id="contenedor" class="contenedor-texto">
         <div id="tablaAutor" class="div-autor"></div>
-        <div id="tablaLibros" class="div-libros"></div>
+        <div class="div-libros">
+          <div id="tablaLibros" class="contenedor-texto"></div>
+        </div>
     </div>
 
     <script>
@@ -86,87 +88,21 @@
           headers: {'Content-Type': 'application/json'}
           })
             .then(
-            function(response){
-              return response.json();
-            }
+              function(response){
+                return response.json();
+              }
             )
             .then (
-            function(json) {
-              var linea = "<div><img class='img-libro' src='"+json.portada+"'><p>"+json.titulo+"</p></div>";
-              document.getElementById("tablaLibros").insertAdjacentHTML("beforeend", linea);
-            }
+              function(json) {
+                for(var cont=0; json.length > cont; cont++) {
+                  var linea = "<div class='div-libro'><img class='img-libro' src='"+json[cont].portada+"'><p>"+json[cont].titulo+"</p></div>";
+                  document.getElementById("tablaLibros").insertAdjacentHTML("beforeend", linea);
+                }
+              }
             )
         }
         
     </script>
-    <!-- <div class="contenedor capa-1">
-        <div class="flex-foto">
-            <img src="../imgs/allende.jpg" class="imagen-perfil">
-        </div>
-        <div class="flex-info">
-            <p id="nombre-autor">
-                Nombre: Isabel Allende
-            </p>
-            <p id="pais-autor">
-                País de origen: Peru
-            </p>
-            <p id="dob-autor">
-                Fecha de nacimiento: 2 de Agosto, 1942.
-            </p>
-            <p id="generos">
-                Géneros literarios: Realismo mágico
-            </p>
-        </div>
-    </div>
-
-    <div class="contenedor espaciado">
-        <div class="libros-pub">
-            <h4>
-                Libros publicados
-            </h4>
-            <div class="contenedor" id="publicaciones">
-                <div class="centrar-texto">
-                    <h5>
-                        La cuidad de las bestias
-                    </h5>
-                    <img src="../imgs/bestias.jpg">
-                </div>
-            </div>
-        </div>
-
-        <div class="premios">
-            <h2 class="centrar-texto">
-                Premios
-            </h2>
-            <p>
-                Mejor Novela del año, en Chile en 1983. <br>
-                Panorama Literario, en Chile en 1983. <br>
-                Autor del año, en Alemania en 1984. <br>
-                Libro del año, en Alemania en 1984. <br>
-                Grand Prix d'Evasion, en Francia en 1984. <br>
-                Grand Prix de la Radio Television Belge (Point de Mire) en 1985. <br>
-                Mejor Novela, en México en 1985. <br>
-                Premio Literario Colima, en México en 1986. <br>
-                Quality Paperback Book Club New Voice, en USA (nominación en 1986). <br>
-            </p>
-        </div>
-    </div>
-
-    <div class="contenedor capa-derecha">
-        <div class="resenna">
-            <h2 class="centrar-texto">
-                Reseña
-            </h2>
-            <p id="resenna">
-                Isabel Allende Llona es una escritora chilena con nacionalidad estadounidense, de ascendencia
-                hispano-portuguesa y nacida en Perú. Desde 2004 es miembro de la Academia Estadounidense de las Artes y
-                las Letras. Obtuvo el Premio Nacional de Literatura de su país en 2010. </p>
-        </div>
-    </div>
-
-    <div class="boton-der">
-        <input type="button" class="boton boton-der " value="Editar Autor">
-    </div> -->
 
 <!-- el footer inicia aquí -->
 
