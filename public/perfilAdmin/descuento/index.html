@@ -51,50 +51,46 @@
     <!-- El contenido va acá -->
     <div class="contenedor-texto">
         <div class="flex-texto">
-            <h1>Actualizar Descuento</h1>
+            <h1>Descuentos</h1>
+            <form action="" id="buscar">
+                <label for="buscar">Buscar:</label>
+                <select name="categoria" id="categoria">
+                        <option value="autor">Autor</option>
+                        <option value="titulo">Título</option>
+                    </select>
+                <input type="search" name="buscar" id="buscar">
+                <input type="submit" value="Buscar">
+            </form>
             <div id="tablaLibros" class="div-tabla">
-               
+                <div class="div-header">
+                    <div class="div-celda">Nombre</div>
+                    <div class="div-celda">Precio</div>
+                    <div class="div-celda">Descuento</div>
+                    <div class="div-celda">Precio Final</div>
+                    <div class="div-celda">Acción</div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-    function cargarTabla() {
-        var direccion = window.location.search;
-        var variables = new URLSearchParams(direccion);
-        var id = variables.get("id");
-
-        var datos = {
-          idLibro: id
+        function cargarTabla() {
+          fetch("/libros/")
+            .then(
+              function(response){
+                return response.json();
+              }
+            )
+            .then (
+              function(json) {
+                for(var cont = 0; json.length > cont; cont++) {
+                  var linea = "<div class='div-fila'><div class='div-celda'>"+json[cont].titulo+"</div><div class='div-celda'>"+json[cont].precio+"</div><div class='div-celda'>"+json[cont].descuento+"</div><div class='div-celda'>"+json[cont].precio_final+"</div><div class='div-celda'><a href='descuento.html?id="+json[cont]._id+"'>MODIFICAR</a></div></div>"
+                  document.getElementById("tablaLibros").insertAdjacentHTML("beforeend", linea);
+                }
+              }
+            ) 
         }
-        
-        fetch("/libros/buscar", {
-          method: 'POST',
-          body: JSON.stringify(datos),
-          headers: {'Content-Type': 'application/json'}
-        })
-          .then(
-            function(response){
-              return response.json();
-            }
-          )
-          .then (
-            function(json) {
-                var linea = "<form action=''><div class='div-fila'><div class='div-celda'>Título:</div><div class='div-celda'>"+json.titulo+"<input type='hidden' id='id' value='"+json._id+"'></div></div>";
-                var linea = linea + "<div class='div-fila'><div class='div-celda'><label for='precio'>Precio:</label></div><div class='div-celda'><input type='text' id='precio' value='"+json.precio+"' disabled></div></div>";
-                var linea = linea + "<div class='div-fila'><div class='div-celda'><label for='descuento'>Descuento:</label></div><div class='div-celda'><input type='text' id='descuento' value='"+json.descuento+"'></div></div>";
-                var linea = linea + "<div class='div-fila'><div class='div-celda'></div><div class='div-celda'><input class='boton3' type='submit' value='Guardar'></div></div></form>";
-                document.getElementById("tablaLibros").insertAdjacentHTML("beforeend", linea);
-            }
-          ) 
-    }
     </script>
-
-
-    
-    
-
-
 
     <!-- Footer -->
     <div class="footer">
