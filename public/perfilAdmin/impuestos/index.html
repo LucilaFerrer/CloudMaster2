@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../css-general/general.css">
-    <link rel="stylesheet" href="./impuestos.css">
+    <link rel="stylesheet" href="../../css-general/estilos.css">
     <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="cargarTabla()">
     <header>
         <div id="barraNav">
             <div id="barraLateral">
@@ -50,13 +50,66 @@
     <div class="contenedor-texto">
         <div class="flex-texto">
             <h1>Impuesto</h1>
-            <form action="/action_page.php" method="post">
+            <form action="" id="formulario">
+                <input type="hidden" id="idImpuesto" name="id">
                 <label for="impuesto">Impuesto (%):</label><br>
-                <input type="text" id="impuesto" name="impuesto" value="13"><br>
-                <input class="boton3" type="submit" value="Enviar">
+                <input type="text" id="impuesto" name="impuesto" value=""><br>
+                <input class="boton3" type="submit" id="submit" value="Modificar">
             </form>
         </div>
     </div>
+
+<script>
+function cargarTabla() {
+  var id = "626ddd60709e1f7aa3ace7ad";
+
+  var datos = {
+    idImpuesto: id
+  }
+  
+  fetch("/impuestos/buscar", {
+    method: 'POST',
+    body: JSON.stringify(datos),
+    headers: {'Content-Type': 'application/json'}
+  })
+    .then(
+      function(response) {
+        return response.json();
+      }
+    )
+    .then (
+      function(json) {
+        console.log(json)
+        document.getElementById("idImpuesto").value = json._id;
+        document.getElementById("impuesto").value = json.impuesto;
+      }
+    )
+}
+
+const form = document.getElementById("formulario");
+if(form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const datos = Object.fromEntries(formData.entries());
+      
+      fetch("/impuestos/actualizar", {
+        method: 'POST',
+        body: JSON.stringify(datos),
+        headers: {'Content-Type': 'application/json'}
+      })
+      .then(
+        function(response) {
+          if(response)
+            window.location = `/perfilAdmin/impuestos/`;
+          else
+            alert('Ocurrió un error.');
+        }
+      )
+     
+    });
+}
+</script>
 
     <!-- Footer -->
     <div class="footer">
