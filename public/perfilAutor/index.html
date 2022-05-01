@@ -62,10 +62,9 @@
             </form> -->
             <div class="div-tabla" id="tablaAutores">
                 <div class="div-header">
-                    <div class="div-celda">Identificador</div>
-                    <div class="div-celda">Nombre</div>
-                    <div class="div-celda">Género</div>
-                    <div class="div-celda">Acción</div>
+                    <div class="div-celda div-celda-200">Nombre</div>
+                    <div class="div-celda div-celda-300">Género</div>
+                    <div class="div-celda div-celda-100">Acción</div>
                 </div>
             </div>
         </div>
@@ -82,7 +81,7 @@
             .then (
               function(json) {
                 for(var cont = 0; json.length > cont; cont++) {
-                  var linea = "<div class='div-fila'><div class='div-celda'>"+json[cont]._id+"</div><div class='div-celda'>"+json[cont].nombre+"</div><div class='div-celda'>"+json[cont].genero+"</div><div class='div-celda'><a href='perfilAutor.html?id="+json[cont]._id+"'>VER</a></div></div>"
+                  var linea = "<div class='div-fila'><div class='div-celda div-celda-200'>"+json[cont].nombre+"</div><div class='div-celda div-celda-300'>"+json[cont].genero+"</div><div class='div-celda div-celda-100'><a href='perfilAutor.html?id="+json[cont]._id+"'>VER</a></div></div>"
                   document.getElementById("tablaAutores").insertAdjacentHTML("beforeend", linea);
                 }
               }
