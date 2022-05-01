@@ -51,9 +51,17 @@
 .div-celda{
     float: left;
     display: table-column;
-    width: fit-content;
     font-weight: bold;
     padding: 1px;
+}
+.div-celda-100{
+    width: 100px;
+}
+.div-celda-200{
+    width: 200px;
+}
+.div-celda-300{
+    width: 300px;
 }
 .div-autor{
     flex-basis: 25%;

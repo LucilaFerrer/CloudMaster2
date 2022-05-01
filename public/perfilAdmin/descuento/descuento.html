@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../css-general/general.css">
-    <link rel="stylesheet" href="./descuento.css">
+    <link rel="stylesheet" href="../../css-general/estilos.css">
     <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
 
 </head>
@@ -53,42 +53,66 @@
         <div class="flex-texto">
             <h1>Actualizar Descuento</h1>
             <div id="tablaLibros" class="div-tabla">
-               
+              <form action='' id="formulario" method="get"></form>
             </div>
         </div>
     </div>
 
-    <script>
-    function cargarTabla() {
-        var direccion = window.location.search;
-        var variables = new URLSearchParams(direccion);
-        var id = variables.get("id");
+<script>
+function cargarTabla() {
+  var direccion = window.location.search;
+  var variables = new URLSearchParams(direccion);
+  var id = variables.get("id");
 
-        var datos = {
-          idLibro: id
+  var datos = {
+    idLibro: id
+  }
+  
+  fetch("/libros/buscar", {
+    method: 'POST',
+    body: JSON.stringify(datos),
+    headers: {'Content-Type': 'application/json'}
+  })
+    .then(
+      function(response) {
+        return response.json();
+      }
+    )
+    .then (
+      function(json) {
+        var linea = "<div class='div-fila'><div class='div-celda div-celda-100'>Título:</div><div class='div-celda div-celda-300'>"+json.titulo+"<input type='hidden' id='id' name='id' value='"+json._id+"'></div></div>";
+        var linea = linea + "<div class='div-fila'><div class='div-celda div-celda-100'><label for='precio'>Precio:</label></div><div class='div-celda div-celda-300'><input type='text' value='"+json.precio+"' disabled><input type='hidden' id='precio' name='precio' value='"+json.precio+"'></div></div>";
+        var linea = linea + "<div class='div-fila'><div class='div-celda div-celda-100'><label for='descuento'>Descuento:</label></div><div class='div-celda div-celda-300'><input type='text' id='descuento' name='descuento' value='"+json.descuento+"'></div></div>";
+        var linea = linea + "<div class='div-fila'><div class='div-celda div-celda-100'></div><div class='div-celda div-celda-300'><input class='boton3' type='submit' id='submit' value='Guardar'></div></div>";
+        document.getElementById("formulario").insertAdjacentHTML("beforeend", linea);
+      }
+    )
+}
+
+const form = document.getElementById("formulario");
+if(form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const datos = Object.fromEntries(formData.entries());
+      
+      fetch("/libros/descuento", {
+        method: 'POST',
+        body: JSON.stringify(datos),
+        headers: {'Content-Type': 'application/json'}
+      })
+      .then(
+        function(response) {
+          if(response)
+            window.location = `/perfilAdmin/descuento/index.html`;
+          else
+            alert('Ocurrió un error.');
         }
-        
-        fetch("/libros/buscar", {
-          method: 'POST',
-          body: JSON.stringify(datos),
-          headers: {'Content-Type': 'application/json'}
-        })
-          .then(
-            function(response){
-              return response.json();
-            }
-          )
-          .then (
-            function(json) {
-                var linea = "<form action=''><div class='div-fila'><div class='div-celda'>Título:</div><div class='div-celda'>"+json.titulo+"<input type='hidden' id='id' value='"+json._id+"'></div></div>";
-                var linea = linea + "<div class='div-fila'><div class='div-celda'><label for='precio'>Precio:</label></div><div class='div-celda'><input type='text' id='precio' value='"+json.precio+"' disabled></div></div>";
-                var linea = linea + "<div class='div-fila'><div class='div-celda'><label for='descuento'>Descuento:</label></div><div class='div-celda'><input type='text' id='descuento' value='"+json.descuento+"'></div></div>";
-                var linea = linea + "<div class='div-fila'><div class='div-celda'></div><div class='div-celda'><input class='boton3' type='submit' value='Guardar'></div></div></form>";
-                document.getElementById("tablaLibros").insertAdjacentHTML("beforeend", linea);
-            }
-          ) 
-    }
-    </script>
+      )
+     
+    });
+}
+</script>
 
 
     

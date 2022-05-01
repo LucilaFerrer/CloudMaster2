@@ -33,6 +33,17 @@ router.post('/buscarautor', function(req, res) {
     );
 });
 
+router.post('/buscartitulo', function(req, res) {
+  var titulo = { "titulo": new RegExp(req.body.titulo, 'i') }
+  console.log(titulo)
+  Libro.find(titulo).exec()
+    .then(
+      function(result) {
+        res.json(result);
+      }
+    );
+});
+
 router.post('/descuento', function(req, res) {
   var identificador = req.body.id;
   var precio = req.body.precio;

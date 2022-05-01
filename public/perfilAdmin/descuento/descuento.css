@@ -58,7 +58,7 @@
 .div-celda {
     float: left;
     display: table-column;
-    width: 250px;
+    width: max-content;
     font-weight: bold;
     padding: 1px;
 }
