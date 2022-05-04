@@ -8,13 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css-general/general.css">
+    <!-- <link rel="stylesheet" href="../css-general/estilos.css"> -->
     <link rel="stylesheet" href="./landingEquipo.css">
     <script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7cbcbea353.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+    <header>
 
+        <div class="header">
+            <div class="flex-izq">
+                <a href="#"><img class="imagen" src="../imgs/logo.jpg"></a>
+            </div>
+            <div class="flex-der">
+                <a href="../IniciarSesion/iniciarSesion.html"><span class="material-icons">
+                    login
+                    </span></a>
+                <a href="../Registro/registro.html"><span class="material-icons">
+                    how_to_reg
+                    </span></a>
+                <span class="material-icons">
+                    star
+                    </span>
+                <span class="material-icons">
+                    shopping_bag
+                    </span>
+
+            </div>
+        </div>
+        <hr>
+    </header>
     <!-- El contenido va acá -->
     <div class="contenedor-texto">
         <div class="flex-texto">
@@ -40,10 +65,44 @@
                 </ul>
             </p>
         </div>
+        <div class="flex-texto">
+            <h2>Integrantes del equipo:</h2>
+            <p><i class="fa-solid fa-person"></i> Diego Fiatt - Calidad</p>
+            <p><i class="fa-solid fa-person"></i> Ronny Alfaro - Soporte</p>
+            <P><i class="fa-solid fa-person"></i> Steven Masis - Coordinación</P>
+            <p><i class="fa-solid fa-person-dress"></i> Lucila Ferrer - Calidad</p>
+        </div>
     </div>
 
+    </div>
+<!-- El footer comienza acá -->
+<div class="footer">
+    <div class="flex1">
+        <p class="texto">CORREO ELECTRÓNICO</p>
+        <p>libreria@libreriaonline.com</p>
+        <p class="texto">Teléfono</p>
+        <p>8888-8888</p>
+        <p class="texto">MENSAJE</p>
+        <textarea class="caja" name="texto" rows="4" cols="40" placeholder="Escriba el mensaje"></textarea>
+        <input class="boton" type="submit" value="Enviar">
 
+    </div>
+    <div class="flex2">
+        <p class="texto">POLÍTICAS</p>
+        <p>Terminos y condicones de compra</p>
+        <p>Política de privacidad</p>
 
+    </div>
+    <div class="flex3">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </br>
+        </br>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/1d06bc87b2.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./landingPage.js">
+</script>
 </body>
 
 </html>
